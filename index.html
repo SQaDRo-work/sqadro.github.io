@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"> 
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
   <section id="block-0">
     <div class="container text-center">
       <div class="row justify-content-center">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
           <audio id="player" src="assets/music.mp3" loop="loop"></audio>
           <div class="music-btn-block">
             <span id="play-music" class="music-btn music-btn-play" onclick="playMusic()"></span>
@@ -28,7 +28,7 @@
   <section id="block-1">
     <div class="container text-center">
       <div class="row justify-content-center">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
           <p class="title">Дорогие гости</p>
           <span class="text">Один день в этом году будет для нас особенным и мы хотим провести его в кругу самых близких и родных людей. Поэтому с большим удовольствием приглашаем вас на нашу свадьбу!</span>
         </div>
@@ -48,15 +48,22 @@
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
+    background-image: url(assets/background_layout.jpg);
   }
   #body {
-    /* background-color: var(--color); */
+    background-color: var(--color);
   }
   section {
     height: 100vh;
     scroll-snap-align: start;
     text-align: center;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   }
   .container {
     color: var(--olive);
@@ -112,13 +119,13 @@
 
 
   #block-1 {
-    padding: 50px 0px;
+    padding: 10rem 3rem;
   }
   #block-0 {
     background-image: url(assets/background_0.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  }
+  #block-1 {
+    background-image: url(assets/background_1.jpg);
   }
 </style>
 
