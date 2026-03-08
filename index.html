@@ -115,6 +115,13 @@
 </html>
 
 <style>
+  @font-face {
+    font-family: 'LarisaScript';
+    src: url('assets/Larisa script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
   :root {
     --beige: #D2B1A4;
     --olive: #767A3C;
@@ -142,6 +149,7 @@
     mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   }
   .container {
+    font-family: "LarisaScript";
     color: var(--olive);
     font-size: 18px;
     font-weight: 600;
@@ -149,8 +157,8 @@
     z-index: 1;
   }
   .title {
-    font-family: "Great Vibes", cursive;
     font-size: 60px;
+    line-height: 60px;
   }
 
 
@@ -199,6 +207,9 @@
     padding: 10rem 3rem;
     background-image: url(assets/background_1.jpg);
   }
+  #block-1 .text {
+    font-size: 25px;
+  }
 
 
   #block-2 {
@@ -213,7 +224,7 @@
   }
   .calendar-title-year {
     position: absolute;
-    font-size: 90px;
+    font-size: 130px;
     line-height: 90px;
     opacity: 0.4;
     left: 0;
@@ -236,9 +247,9 @@
     height: 30px;
     width: 35px;
     position: absolute;
-    left: 0;
+    left: 2px;
     right: 0;
-    top: 7px;
+    top: 4px;
     bottom: 0;
   }
   .heart-day {
