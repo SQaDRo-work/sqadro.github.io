@@ -35,6 +35,84 @@
       </div>
     </div>
   </section>
+  <section id="block-2">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <div class="calendar-wrapper">
+            <div class="calendar-title">
+              <span class="calendar-title-year">2026</span>
+              <span class="calendar-title-month">ИЮНЬ</span>
+            </div>
+            <table class="calendar">
+              <tr>
+                <th class="cell">ПН</th>
+                <th class="cell">ВТ</th>
+                <th class="cell">СР</th>
+                <th class="cell">ЧТ</th>
+                <th class="cell">ПТ</th>
+                <th class="cell">СБ</th>
+                <th class="cell">ВС</th>
+              </tr>
+              <tr>
+                <th class="cell">1</th>
+                <th class="cell">2</th>
+                <th class="cell">3</th>
+                <th class="cell">4</th>
+                <th class="cell">5</th>
+                <th class="cell">6</th>
+                <th class="cell">7</th>
+              </tr>
+              <tr>
+                <th class="cell">8</th>
+                <th class="cell">9</th>
+                <th class="cell">10</th>
+                <th class="cell">11</th>
+                <th class="cell">12</th>
+                <th class="cell">13</th>
+                <th class="cell">14</th>
+              </tr>
+              <tr>
+                <th class="cell">15</th>
+                <th class="cell">16</th>
+                <th class="cell">17</th>
+                <th class="cell">18</th>
+                <th class="cell">19</th>
+                <th class="cell">
+                  <svg class="svg-heart" viewBox="0 0 10 10">
+                    <path class="svg-heart-path" d="M2,2 L4,4 L6,2" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                  </svg>
+                  <span class="heart-day">20</span>
+                </th>
+                <th class="cell">21</th>
+              </tr>
+              <tr>
+                <th class="cell">22</th>
+                <th class="cell">23</th>
+                <th class="cell">24</th>
+                <th class="cell">25</th>
+                <th class="cell">26</th>
+                <th class="cell">27</th>
+                <th class="cell">28</th>
+              </tr>
+              <tr>
+                <th class="cell">29</th>
+                <th class="cell">30</th>
+                <th class="cell"></th>
+                <th class="cell"></th>
+                <th class="cell"></th>
+                <th class="cell"></th>
+                <th class="cell"></th>
+              </tr>
+            </table>
+          </div>
+          <div class="photo-wrapper">
+            <img class="photo" src="assets/photo_0.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
 
@@ -80,6 +158,7 @@
 
   #block-0 {
     margin-top: 40px;
+    background-image: url(assets/background_0.jpg);
   }
   #block-0 .container {
     min-height: 740px;
@@ -120,12 +199,63 @@
 
   #block-1 {
     padding: 10rem 3rem;
-  }
-  #block-0 {
-    background-image: url(assets/background_0.jpg);
-  }
-  #block-1 {
     background-image: url(assets/background_1.jpg);
+  }
+
+
+  #block-2 {
+    padding-top: 7rem;
+    background-image: url(assets/background_1.jpg);
+  }
+  .calendar-wrapper {
+    display: inline-block;
+  }
+  .calendar-title {
+    position: relative;
+  }
+  .calendar-title-year {
+    position: absolute;
+    font-size: 90px;
+    line-height: 90px;
+    opacity: 0.4;
+    left: 0;
+    right: 0;
+  }
+  .calendar-title-month {
+    font-size: 35px;
+    line-height: 90px;
+    z-index: 1;
+    position: relative;
+  }
+  .calendar {
+    font-size: 20px;
+  }
+  .cell {
+    padding: 5px;
+    position: relative;
+  }
+  .svg-heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 6px;
+    left: -3px;
+  }
+  .svg-heart-path {
+    stroke: var(--olive);
+  }
+  .heart-day {
+    z-index: 2;
+    position: relative;
+    color: #ffffff;
+  }
+  .photo-wrapper {
+    margin-top: 3rem;
+  }
+  .photo {
+    width: calc(100vw - 9rem);
+    opacity: 0.7;
+    mask-image: radial-gradient(black 50%, transparent 74%);
   }
 </style>
 
