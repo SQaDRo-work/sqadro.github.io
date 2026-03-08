@@ -36,6 +36,9 @@
     </div>
   </section>
   <section id="block-2">
+    <div class="photo-wrapper">
+      <img class="photo" src="assets/photo_0.jpg">
+    </div>
     <div class="container text-center">
       <div class="row justify-content-center">
         <div class="col-sm-12">
@@ -79,9 +82,7 @@
                 <th class="cell">18</th>
                 <th class="cell">19</th>
                 <th class="cell">
-                  <svg class="svg-heart" viewBox="0 0 10 10">
-                    <path class="svg-heart-path" d="M2,2 L4,4 L6,2" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
+                  <img class="heart-img" src="assets/heart.png">
                   <span class="heart-day">20</span>
                 </th>
                 <th class="cell">21</th>
@@ -105,9 +106,6 @@
                 <th class="cell"></th>
               </tr>
             </table>
-          </div>
-          <div class="photo-wrapper">
-            <img class="photo" src="assets/photo_0.jpg">
           </div>
         </div>
       </div>
@@ -234,15 +232,14 @@
     padding: 5px;
     position: relative;
   }
-  .svg-heart {
+  .heart-img {
+    height: 30px;
+    width: 35px;
     position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 6px;
-    left: -3px;
-  }
-  .svg-heart-path {
-    stroke: var(--olive);
+    left: 0;
+    right: 0;
+    top: 7px;
+    bottom: 0;
   }
   .heart-day {
     z-index: 2;
@@ -250,7 +247,10 @@
     color: #ffffff;
   }
   .photo-wrapper {
-    margin-top: 3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
   }
   .photo {
     width: calc(100vw - 9rem);
