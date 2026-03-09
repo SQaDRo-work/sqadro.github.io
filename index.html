@@ -160,10 +160,28 @@
           <p class="title">Дресс-код</p>
           <span class="text">Нам будет особенно приятно, если вы поддержите стиль нашей свадьбы в своих образах</span>
           <div class="dresscode-block">
-            <div class="dresscode-img img-0"></div>
-            <div class="dresscode-img img-1"></div>
-            <div class="dresscode-img img-2"></div>
-            <div class="dresscode-color"></div>
+            <div class="dresscode-img olive-img-0"></div>
+            <div class="dresscode-img olive-img-1"></div>
+            <div class="dresscode-img olive-img-2"></div>
+            <div class="dresscode-color olive-color"></div>
+          </div>
+          <div class="dresscode-block">
+            <div class="dresscode-img brown-img-0"></div>
+            <div class="dresscode-img brown-img-1"></div>
+            <div class="dresscode-img brown-img-2"></div>
+            <div class="dresscode-color brown-color"></div>
+          </div>
+          <div class="dresscode-block">
+            <div class="dresscode-img sky-img-0"></div>
+            <div class="dresscode-img sky-img-1"></div>
+            <div class="dresscode-img sky-img-2"></div>
+            <div class="dresscode-color sky-color"></div>
+          </div>
+          <div class="dresscode-block">
+            <div class="dresscode-img beige-img-0"></div>
+            <div class="dresscode-img beige-img-1"></div>
+            <div class="dresscode-img beige-img-2"></div>
+            <div class="dresscode-color beige-color"></div>
           </div>
         </div>
       </div>
@@ -183,6 +201,8 @@
   :root {
     --beige: #D2B1A4;
     --olive: #767A3C;
+    --sky: #90AAD6;
+    --brown: #57342E;
   }
   html {
     font-family: sans-serif;
@@ -415,35 +435,82 @@
     line-height: 30px;
   }
   .dresscode-block {
-    margin-top: 30px;
+    margin-top: 20px;
     position: relative;
   }
   .dresscode-img {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: contain;
     width: 85px;
     height: 120px;
     position: absolute;
-    top: -27px;
+    top: -17px;
   }
-  #block-5 .img-0 {
+  #block-5 .olive-img-0 {
     background-image: url(assets/olive_0.png);
     left: -23px;
   }
-  #block-5 .img-1 {
+  #block-5 .olive-img-1 {
     background-image: url(assets/olive_1.png);
     left: -10px;
   }
-  #block-5 .img-2 {
+  #block-5 .olive-img-2 {
     background-image: url(assets/olive_2.png);
     left: 18px;
   }
+  #block-5 .brown-img-0 {
+    background-image: url(assets/brown_0.png);
+    right: -23px;
+  }
+  #block-5 .brown-img-1 {
+    background-image: url(assets/brown_1.png);
+    right: -5px;
+  }
+  #block-5 .brown-img-2 {
+    background-image: url(assets/brown_2.png);
+    right: 21px;
+  }
+  #block-5 .sky-img-0 {
+    background-image: url(assets/sky_0.png);
+    left: -23px;
+  }
+  #block-5 .sky-img-1 {
+    background-image: url(assets/sky_1.png);
+    left: 2px;
+  }
+  #block-5 .sky-img-2 {
+    background-image: url(assets/sky_2.png);
+    left: 18px;
+  }
+  #block-5 .beige-img-0 {
+    background-image: url(assets/beige_0.png);
+    right: -26px;
+  }
+  #block-5 .beige-img-1 {
+    background-image: url(assets/beige_1.png);
+    right: -8px;
+  }
+  #block-5 .beige-img-2 {
+    background-image: url(assets/beige_2.png);
+    right: 17px;
+  }
   .dresscode-color {
-    background-color: var(--olive);
     width: 100%;
     height: 90px;
     border-radius: 15px;
+  }
+  .dresscode-color.olive-color {
+    background-color: var(--olive);
+  }
+  .dresscode-color.brown-color {
+    background-color: var(--brown);
+  }
+  .dresscode-color.sky-color {
+    background-color: var(--sky);
+  }
+  .dresscode-color.beige-color {
+    background-color: var(--beige);
   }
 </style>
 
