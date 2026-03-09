@@ -118,12 +118,36 @@
     <div class="container text-center">
       <div class="row justify-content-center">
         <div class="col-sm-12">
-          <p class="title">Место проведения:</p>
+          <p class="title">Место проведения</p>
           <span class="text">Загородный клуб Небо Свердловская область, городской круг Верхняя Пышма</span>
-          <div class="map-wrapper" style="position:relative;overflow:hidden;">
-            <a href="https://yandex.ru/maps/org/nebo/85075257427/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Небо</a>
-            <a href="https://yandex.ru/maps/11162/sverdlovsk-oblast/category/banquet_hall/184108315/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Банкетный зал в Свердловской области</a>
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=60.394080%2C56.988379&mode=search&oid=85075257427&ol=biz&z=16.87" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+          <div class="map-wrapper">
+            <img class="map" src="assets/map.png">
+          </div>
+          <a class="btn" href="https://yandex.ru/maps/-/CPu-eGOZ" target="_blank">Открыть на карте</a>  
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="block-4">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p class="title">Программа дня</p>
+          <div class="timing-block">
+            <div class="timing-block-img img-0"></div>
+            <span class="timing-time">16.00</span><span class="timing-block-text">сбор<br>гостей</span>
+          </div>
+          <div class="timing-block">
+            <span class="timing-block-text">церемония</span><span class="timing-time">17.00</span>
+            <div class="timing-block-img img-1"></div>
+          </div>
+          <div class="timing-block">
+            <div class="timing-block-img img-2"></div>
+            <span class="timing-time">18.00</span><span class="timing-block-text">начало<br>банкета</span>
+          </div>
+          <div class="timing-block">
+            <span class="timing-block-text">завершение<br>вечера</span><span class="timing-time">23.00</span>
+            <div class="timing-block-img img-3"></div>
           </div>
         </div>
       </div>
@@ -294,10 +318,71 @@
     padding: 7rem 3rem;
     background-image: url(assets/background_1.jpg);
   }
+  #block-3 .title {
+    font-size: 60px;
+    line-height: 40px;
+  }
+  #block-3 .text {
+    font-size: 25px;
+    line-height: 30px;
+  }
   .map-wrapper {
-    height: 30vh;
     max-height: 400px;
     margin-top: 25px;
+  }
+  .map {
+    width: calc(100vw - 9rem);
+    max-width: calc(630px - 9rem);
+    mask-image: radial-gradient(black 50%, transparent 74%);
+  }
+  .btn {
+    color: #ffffff !important;
+    background-color: var(--olive) !important;
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+
+  #block-4 {
+    padding: 3rem 1rem 20rem;
+    background-image: url(assets/background_2.jpg);
+  }
+  #block-4 .title {
+    font-size: 60px;
+    line-height: 40px;
+  }
+  .timing-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .timing-block-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 80px;
+    height: 80px;
+  }
+  #block-4 .img-0 {
+    background-image: url(assets/timing_img_0.png);
+  }
+  #block-4 .img-1 {
+    background-image: url(assets/timing_img_1.png);
+  }
+  #block-4 .img-2 {
+    background-image: url(assets/timing_img_2.png);
+  }
+  #block-4 .img-3 {
+    background-image: url(assets/timing_img_3.png);
+  }
+  .timing-time {
+    font-size: 40px;
+    margin: 0 10px;
+  }
+  .timing-block-text {
+    font-size: 25px;
+    line-height: 20px;
   }
 </style>
 
