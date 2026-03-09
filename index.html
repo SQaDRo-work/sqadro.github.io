@@ -153,6 +153,22 @@
       </div>
     </div>
   </section>
+  <section id="block-5">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p class="title">Дресс-код</p>
+          <span class="text">Нам будет особенно приятно, если вы поддержите стиль нашей свадьбы в своих образах</span>
+          <div class="dresscode-block">
+            <div class="dresscode-img img-0"></div>
+            <div class="dresscode-img img-1"></div>
+            <div class="dresscode-img img-2"></div>
+            <div class="dresscode-color"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
 
@@ -383,6 +399,51 @@
   .timing-block-text {
     font-size: 25px;
     line-height: 20px;
+  }
+
+
+  #block-5 {
+    padding: 7rem 3rem;
+    background-image: url(assets/background_1.jpg);
+  }
+  #block-5 .title {
+    font-size: 60px;
+    line-height: 40px;
+  }
+  #block-5 .text {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .dresscode-block {
+    margin-top: 30px;
+    position: relative;
+  }
+  .dresscode-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 85px;
+    height: 120px;
+    position: absolute;
+    top: -27px;
+  }
+  #block-5 .img-0 {
+    background-image: url(assets/olive_0.png);
+    left: -23px;
+  }
+  #block-5 .img-1 {
+    background-image: url(assets/olive_1.png);
+    left: -10px;
+  }
+  #block-5 .img-2 {
+    background-image: url(assets/olive_2.png);
+    left: 18px;
+  }
+  .dresscode-color {
+    background-color: var(--olive);
+    width: 100%;
+    height: 90px;
+    border-radius: 15px;
   }
 </style>
 
