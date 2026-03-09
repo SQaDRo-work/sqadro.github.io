@@ -163,26 +163,84 @@
             <div class="dresscode-img olive-img-0"></div>
             <div class="dresscode-img olive-img-1"></div>
             <div class="dresscode-img olive-img-2"></div>
-            <div class="dresscode-color olive-color"></div>
+            <div class="dresscode-color olive-color">
+              <span class="dresscode-text olive-text">Оливковый</span>
+            </div>
           </div>
           <div class="dresscode-block">
             <div class="dresscode-img brown-img-0"></div>
             <div class="dresscode-img brown-img-1"></div>
             <div class="dresscode-img brown-img-2"></div>
-            <div class="dresscode-color brown-color"></div>
+            <div class="dresscode-color brown-color">
+              <span class="dresscode-text brown-text">Шоколадный</span>
+            </div>
           </div>
           <div class="dresscode-block">
             <div class="dresscode-img sky-img-0"></div>
             <div class="dresscode-img sky-img-1"></div>
             <div class="dresscode-img sky-img-2"></div>
-            <div class="dresscode-color sky-color"></div>
+            <div class="dresscode-color sky-color">
+              <span class="dresscode-text sky-text">Голубой</span>
+            </div>
           </div>
           <div class="dresscode-block">
             <div class="dresscode-img beige-img-0"></div>
             <div class="dresscode-img beige-img-1"></div>
             <div class="dresscode-img beige-img-2"></div>
-            <div class="dresscode-color beige-color"></div>
+            <div class="dresscode-color beige-color">
+              <span class="dresscode-text beige-text">Бежевый</span>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="block-6">
+    <div class="photo-wrapper">
+      <img class="photo" src="assets/shampane_img.jpg">
+    </div>
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p class="title">Детали</p>
+          <span class="text">Сразу после торжества мы улетаем в свадебное путешествие, поэтому, если Вы планировали порадовать нас цветами, подарите нам, пожалуйста, бутылочку игристого вина. А на открытке напишите дату или событие, когда, по Вашему мнению, нам стоит её распить. Это будет своего рода капсула времени, и приятный повод вспомнить о Вас.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="block-7">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p class="title">Анкета гостя</p>
+          <span class="text">Просим подтвердить своё присутствие до 1 мая 2026 года.</span>
+          <span class="text question-text">Получится ли у Вас присутствовать?</span>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exist-on-wedding" id="exist-on-wedding-yes" value="yes" checked>
+            <label class="form-check-label" for="exist-on-wedding-yes">
+              Да, буду(ем) присутствовать
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exist-on-wedding" id="exist-on-wedding-no" value="no">
+            <label class="form-check-label" for="exist-on-wedding-no">
+              Нет, не буду(ем) присутствовать
+            </label>
+          </div>
+          <span class="text question-text">Нужна ли помощь с размещением?</span>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="home-on-wedding" id="home-on-wedding-yes" value="yes">
+            <label class="form-check-label" for="home-on-wedding-yes">
+              Да, нужна помощь
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="home-on-wedding" id="home-on-wedding-no" value="no" checked>
+            <label class="form-check-label" for="home-on-wedding-no">
+              Нет, не нужна помощь
+            </label>
+          </div>
+          <a class="btn" href="javascript:void(0)">Отправить</a>  
         </div>
       </div>
     </div>
@@ -511,6 +569,64 @@
   }
   .dresscode-color.beige-color {
     background-color: var(--beige);
+  }
+  .dresscode-text {
+    color: #ffffff;
+    line-height: 90px;
+    font-size: 30px;
+  }
+  .dresscode-text.olive-text,
+  .dresscode-text.sky-text {
+    margin-left: 65px;
+  }
+  .dresscode-text.brown-text,
+  .dresscode-text.beige-text {
+    margin-right: 90px;
+  }
+
+
+  #block-6 {
+    padding: 7rem 3rem;
+    background-image: url(assets/background_1.jpg);
+  }
+  #block-6 .title {
+    font-size: 60px;
+    line-height: 40px;
+  }
+  #block-6 .text {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  #block-7 {
+    padding: 7rem 3rem;
+    background-image: url(assets/background_1.jpg);
+  }
+  #block-7 .title {
+    font-size: 60px;
+    line-height: 40px;
+  }
+  #block-7 .text {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .question-text {
+    margin-top: 20px;
+    display: block;
+  }
+  #block-7 .form-check-input {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--olive);
+    border-width: 2px;
+  }
+  #block-7 .form-check-input:checked {
+    border-width: 9px;
+  }
+  .form-check-label {
+    white-space: nowrap;
+    text-align: left;
+    display: block;
   }
 </style>
 
