@@ -59,52 +59,52 @@
                 <th class="cell">ВС</th>
               </tr>
               <tr>
-                <th class="cell">1</th>
-                <th class="cell">2</th>
-                <th class="cell">3</th>
-                <th class="cell">4</th>
-                <th class="cell">5</th>
-                <th class="cell">6</th>
-                <th class="cell">7</th>
+                <td class="cell">1</td>
+                <td class="cell">2</td>
+                <td class="cell">3</td>
+                <td class="cell">4</td>
+                <td class="cell">5</td>
+                <td class="cell">6</td>
+                <td class="cell">7</td>
               </tr>
               <tr>
-                <th class="cell">8</th>
-                <th class="cell">9</th>
-                <th class="cell">10</th>
-                <th class="cell">11</th>
-                <th class="cell">12</th>
-                <th class="cell">13</th>
-                <th class="cell">14</th>
+                <td class="cell">8</td>
+                <td class="cell">9</td>
+                <td class="cell">10</td>
+                <td class="cell">11</td>
+                <td class="cell">12</td>
+                <td class="cell">13</td>
+                <td class="cell">14</td>
               </tr>
               <tr>
-                <th class="cell">15</th>
-                <th class="cell">16</th>
-                <th class="cell">17</th>
-                <th class="cell">18</th>
-                <th class="cell">19</th>
-                <th class="cell">
+                <td class="cell">15</td>
+                <td class="cell">16</td>
+                <td class="cell">17</td>
+                <td class="cell">18</td>
+                <td class="cell">19</td>
+                <td class="cell">
                   <img class="heart-img" src="assets/heart.png">
                   <span class="heart-day">20</span>
-                </th>
-                <th class="cell">21</th>
+                </td>
+                <td class="cell">21</td>
               </tr>
               <tr>
-                <th class="cell">22</th>
-                <th class="cell">23</th>
-                <th class="cell">24</th>
-                <th class="cell">25</th>
-                <th class="cell">26</th>
-                <th class="cell">27</th>
-                <th class="cell">28</th>
+                <td class="cell">22</td>
+                <td class="cell">23</td>
+                <td class="cell">24</td>
+                <td class="cell">25</td>
+                <td class="cell">26</td>
+                <td class="cell">27</td>
+                <td class="cell">28</td>
               </tr>
               <tr>
-                <th class="cell">29</th>
-                <th class="cell">30</th>
-                <th class="cell"></th>
-                <th class="cell"></th>
-                <th class="cell"></th>
-                <th class="cell"></th>
-                <th class="cell"></th>
+                <td class="cell">29</td>
+                <td class="cell">30</td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
               </tr>
             </table>
           </div>
@@ -225,7 +225,7 @@
               Нет, не буду(ем) присутствовать
             </label>
           </div>
-          <span class="text question-text">Нужна ли помощь с размещением?</span>
+          <span class="text question-text">Нужна ли помощь с размещением?<br>(для иногородних)</span>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="home-on-wedding" id="home-on-wedding-yes" value="yes">
             <label class="form-check-label" for="home-on-wedding-yes">
@@ -238,7 +238,22 @@
               Нет, не нужна помощь
             </label>
           </div>
-          <a class="btn" href="javascript:void(0)">Отправить</a>  
+          <a class="btn" href="javascript:void(0)">Отправить</a>
+          <span class="additional-text">* Для гостей из Екатеринбурга будет организован трансфер</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="block-8">
+    <div class="photo-wrapper">
+      <img class="photo" src="assets/photo_2.jpg">
+    </div>
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p class="title">Контакты</p>
+          <span class="text">Если Вы хотите сделать нам сюрприз или уточнить детали торжества, свяжитесь, пожайлуста с нашими организаторами.</span>
+          <a class="btn" href="https://t.me/Vlada_nalegke" target="_blank"></a>
         </div>
       </div>
     </div>
@@ -286,14 +301,10 @@
     font-family: "LarisaScript";
     color: var(--olive);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
     position: relative;
     z-index: 1;
-  }
-  .container .text,
-  .container .form-check-label,
-  .container .cell {
-    text-shadow: 1px 1px 0px rgb(255 255 255);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   }
 
 
@@ -384,13 +395,18 @@
     padding: 5px;
     position: relative;
   }
+  td.cell {
+    padding: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
   .heart-img {
-    height: 30px;
-    width: 35px;
+    height: 40px;
+    width: 45px;
     position: absolute;
-    left: 2px;
+    left: -4px;
     right: 0;
-    top: 4px;
+    top: 0px;
     bottom: 0;
   }
   .heart-day {
@@ -441,6 +457,7 @@
     margin-top: 25px;
     font-size: 20px;
     line-height: 23px;
+    font-weight: bold;
   }
 
 
@@ -607,7 +624,7 @@
   }
   #block-6 .text {
     font-size: 25px;
-    line-height: 30px;
+    line-height: 25px;
   }
 
   #block-7 {
@@ -639,6 +656,38 @@
     white-space: nowrap;
     text-align: left;
     display: block;
+  }
+  #block-7 .btn {
+    margin-top: 10px;
+  }
+  .additional-text {
+    display: block;
+  }
+
+
+  #block-8 {
+    padding: 6rem 3rem;
+    background-image: url(assets/background_1.jpg);
+  }
+  #block-8 .title {
+    font-size: 60px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  #block-8 .text {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  #block-8 .btn {
+    background-image: url(assets/telegram.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: -2px 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
   }
 </style>
 
