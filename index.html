@@ -258,6 +258,25 @@
       </div>
     </div>
   </section>
+  <section id="block-9">
+    <div class="photo-wrapper">
+      <img class="photo" src="assets/photo_3.jpg">
+    </div>
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p class="title">Торжество начнётся через</p>
+          <div class="timer">
+            <div class="timer__item timer__days">00</div>
+            <div class="separator">:</div>
+            <div class="timer__item timer__hours">00</div>
+            <div class="separator">:</div>
+            <div class="timer__item timer__minutes">00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
 
@@ -689,9 +708,91 @@
     display: block;
     margin: 10px auto;
   }
+
+
+  #block-9 {
+    padding: 6rem 3rem;
+    background-image: url(assets/background_1.jpg);
+  }
+  #block-9 .title {
+    font-size: 60px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  .timer {
+    font-size: 70px;
+    justify-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 55px auto;
+  }
+  .timer__item {
+    position: relative;
+  }
+  .timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: var(--olive);
+  }
+  #block-9 .photo-wrapper {
+    bottom: 100px;
+  }
+  #block-9 .photo {
+    width: calc(100vw - 5rem);
+    max-width: calc(630px - 9rem);
+    opacity: 0.7;
+    mask-image: radial-gradient(black 50%, transparent 80%);
+  }
 </style>
 
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Установите конечную дату
+    const deadline = new Date('2026-06-20T17:00:00');
+    
+    // Найдите элементы DOM
+    const elDays = document.querySelector('.timer__days');
+    const elHours = document.querySelector('.timer__hours');
+    const elMinutes = document.querySelector('.timer__minutes');
+    
+    // Функция склонения числительных
+    const declensionNum = (num, words) => {
+      return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][num % 10 < 5 ? num % 10 : 5]];
+    };
+
+    // Функция обновления таймера
+    const updateTimer = () => {
+      const now = new Date();
+      const diff = Math.max(0, deadline - now);
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+      elDays.textContent = String(days).padStart(2, '0');
+      elHours.textContent = String(hours).padStart(2, '0');
+      elMinutes.textContent = String(minutes).padStart(2, '0');
+
+      elDays.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+      elHours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+      elMinutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+
+      if (diff === 0) {
+        clearInterval(timerId);
+      }
+    };
+
+    // Запустите таймер
+    updateTimer();
+    const timerId = setInterval(updateTimer, 1000);
+  });
+
   window.onload = function() {
     document.getElementById("player").play();
   }
