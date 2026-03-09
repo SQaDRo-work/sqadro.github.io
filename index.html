@@ -14,13 +14,11 @@
     <div class="container text-center">
       <div class="row justify-content-center">
         <div class="col-sm-12">
-          <audio id="player" src="assets/music.mp3" loop="loop"></audio>
+          <!-- <audio id="player" src="assets/music.mp3" loop="loop"></audio>
           <div class="music-btn-block">
             <span id="play-music" class="music-btn music-btn-play" onclick="playMusic()"></span>
             <span id="pause-music" class="music-btn music-btn-pause" onclick="pauseMusic()"></span>
-          </div>
-          <p class="title title-name">Алексей</br>&</br>Ольга</p>
-          <p class="title title-date">20.06.2026</p>
+          </div> -->
         </div>
       </div>
     </div>
@@ -119,7 +117,7 @@
       <div class="row justify-content-center">
         <div class="col-sm-12">
           <p class="title">Место проведения</p>
-          <span class="text">Загородный клуб Небо Свердловская область, городской круг Верхняя Пышма</span>
+          <span class="text">Загородный клуб "Небо" Свердловская обл., городской округ<br>Верхняя Пышма</span>
           <div class="map-wrapper">
             <img class="map" src="assets/map.png">
           </div>
@@ -158,7 +156,7 @@
       <div class="row justify-content-center">
         <div class="col-sm-12">
           <p class="title">Дресс-код</p>
-          <span class="text">Нам будет особенно приятно, если вы поддержите стиль нашей свадьбы в своих образах</span>
+          <span class="text">Нам будет особенно приятно, если Вы поддержите стиль нашей свадьбы в своих образах</span>
           <div class="dresscode-block">
             <div class="dresscode-img olive-img-0"></div>
             <div class="dresscode-img olive-img-1"></div>
@@ -203,7 +201,7 @@
       <div class="row justify-content-center">
         <div class="col-sm-12">
           <p class="title">Детали</p>
-          <span class="text">Сразу после торжества мы улетаем в свадебное путешествие, поэтому, если Вы планировали порадовать нас цветами, подарите нам, пожалуйста, бутылочку игристого вина. А на открытке напишите дату или событие, когда, по Вашему мнению, нам стоит её распить. Это будет своего рода капсула времени, и приятный повод вспомнить о Вас.</span>
+          <span class="text">Сразу после торжества мы улетаем в свадебное путешествие, поэтому, если Вы планировали порадовать нас цветами, подарите нам, пожалуйста, бутылочку игристого вина.<br>А на открытке напишите дату или событие, когда, по Вашему мнению, нам стоит её распить.<br>Это будет своего рода капсула времени, и приятный повод вспомнить о Вас.</span>
         </div>
       </div>
     </div>
@@ -291,6 +289,11 @@
     font-weight: 600;
     position: relative;
     z-index: 1;
+  }
+  .container .text,
+  .container .form-check-label,
+  .container .cell {
+    text-shadow: 1px 1px 0px rgb(255 255 255);
   }
 
 
@@ -410,12 +413,13 @@
 
 
   #block-3 {
-    padding: 7rem 3rem;
+    padding: 6rem 3rem;
     background-image: url(assets/background_1.jpg);
   }
   #block-3 .title {
     font-size: 60px;
     line-height: 40px;
+    margin-bottom: 30px;
   }
   #block-3 .text {
     font-size: 25px;
@@ -428,7 +432,8 @@
   .map {
     width: calc(100vw - 9rem);
     max-width: calc(630px - 9rem);
-    mask-image: radial-gradient(black 50%, transparent 74%);
+    border-radius: 20px;
+    border: 2px solid;
   }
   .btn {
     color: #ffffff !important;
@@ -447,17 +452,23 @@
     font-size: 60px;
     line-height: 40px;
   }
+  #block-4 .col-sm-12 {
+    width: 80%;
+  }
   .timing-block {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+  }
+  .timing-block:nth-child(even) {
+    justify-content: flex-start;
   }
   .timing-block-img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   #block-4 .img-0 {
     background-image: url(assets/timing_img_0.png);
@@ -482,7 +493,7 @@
 
 
   #block-5 {
-    padding: 7rem 3rem;
+    padding: 6rem 3rem;
     background-image: url(assets/background_1.jpg);
   }
   #block-5 .title {
@@ -556,7 +567,7 @@
   }
   .dresscode-color {
     width: 100%;
-    height: 90px;
+    height: 80px;
     border-radius: 15px;
   }
   .dresscode-color.olive-color {
@@ -587,7 +598,7 @@
 
 
   #block-6 {
-    padding: 7rem 3rem;
+    padding: 6rem 3rem;
     background-image: url(assets/background_1.jpg);
   }
   #block-6 .title {
@@ -600,7 +611,7 @@
   }
 
   #block-7 {
-    padding: 7rem 3rem;
+    padding: 6rem 3rem;
     background-image: url(assets/background_1.jpg);
   }
   #block-7 .title {
