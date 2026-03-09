@@ -114,6 +114,21 @@
       </div>
     </div>
   </section>
+  <section id="block-3">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <p class="title">Место проведения:</p>
+          <span class="text">Загородный клуб Небо Свердловская область, городской круг Верхняя Пышма</span>
+          <div class="map-wrapper" style="position:relative;overflow:hidden;">
+            <a href="https://yandex.ru/maps/org/nebo/85075257427/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Небо</a>
+            <a href="https://yandex.ru/maps/11162/sverdlovsk-oblast/category/banquet_hall/184108315/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Банкетный зал в Свердловской области</a>
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=60.394080%2C56.988379&mode=search&oid=85075257427&ol=biz&z=16.87" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
 
@@ -158,7 +173,6 @@
     font-weight: 600;
     position: relative;
     z-index: 1;
-    text-shadow: 1px 1px 0px #3e401f, 0 0 1em #ffffff, 0 0 0.2em #ffffff;
   }
 
 
@@ -270,8 +284,20 @@
   }
   .photo {
     width: calc(100vw - 9rem);
+    max-width: calc(630px - 9rem);
     opacity: 0.7;
     mask-image: radial-gradient(black 50%, transparent 74%);
+  }
+
+
+  #block-3 {
+    padding: 7rem 3rem;
+    background-image: url(assets/background_1.jpg);
+  }
+  .map-wrapper {
+    height: 30vh;
+    max-height: 400px;
+    margin-top: 25px;
   }
 </style>
 
