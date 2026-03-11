@@ -279,7 +279,7 @@
   </div>
   <div class="overlay-wrapper">
     <div class="cover-paths top-path">
-      <span class="top-path-text-names">Никита<br>&<br>Анастасия</span>
+      <span id="greetings-names" class="top-path-text-names">Никита<br>&<br>Анастасия</span>
       <span class="top-path-text">Вы приглашены<br>на свадьбу</span>
     </div>
     <div class="cover-paths bottom-path">
@@ -849,15 +849,18 @@
     cursor: pointer;
   }
   .top-path-text-names {
-    display: block;
     position: fixed;
     width: 100vw;
     max-width: 400px;
     padding: 0px 55px;
     font-size: 55px;
-    line-height: 45px;
-    text-align: center;
+    line-height: 55px;
     top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    text-align: center;
   }
   .top-path-text {
     display: block;
@@ -934,6 +937,20 @@
 </style>
 
 <script>
+  window.onload = function() {
+    const namesDict = [
+      { name: "Никита<br>&<br>Анастасия", id:	"0C526B5A-F6DE-45D9-B96F-CE1724C9627C" },
+      { name: "Егор", id:	"6B94998A-0DDA-4B86-A980-D00BA221EB67" },
+      { name: "Андрей<br>&<br>Мария", id:	"FBEB7F66-F7DB-4FA8-A8F6-CC66092D0FF5" },
+      { name: "Андрей<br>&<br>Татьяна", id:	"884B93CF-A034-4799-9FC5-3B3E03297F50" },
+      { name: "Владислав<br>&<br>Ксения", id:	"B72AC33A-88B7-4CFB-925B-E77075C13929" },
+    ]
+    let id = new URLSearchParams(window.location.search).get("id");
+    let greetingsText = namesDict.find(guest => guest.id === id).name;
+    document.getElementById('greetings-names').innerHTML = greetingsText;
+  }
+
+
   document.addEventListener('DOMContentLoaded', () => {
     // Установите конечную дату
     const deadline = new Date('2026-06-20T17:00:00');
