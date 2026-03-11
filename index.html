@@ -14,11 +14,6 @@
     <div class="container text-center">
       <div class="row justify-content-center">
         <div class="col-sm-12">
-          <!-- <audio id="player" src="assets/music.mp3" loop="loop"></audio>
-          <div class="music-btn-block">
-            <span id="play-music" class="music-btn music-btn-play" onclick="playMusic()"></span>
-            <span id="pause-music" class="music-btn music-btn-pause" onclick="pauseMusic()"></span>
-          </div> -->
         </div>
       </div>
     </div>
@@ -277,6 +272,23 @@
       </div>
     </div>
   </section>
+  <div id="music-overlay" class="stop">
+    <audio id="player" src="assets/music.mp3" loop="loop"></audio>
+    <span id="play-music" class="music-btn music-btn-play" onclick="playMusic()"></span>
+    <span id="pause-music" class="music-btn music-btn-pause" onclick="pauseMusic()"></span>
+  </div>
+  <div class="overlay-wrapper">
+    <div class="cover-paths top-path">
+      <span class="top-path-text-names">Никита<br>&<br>Анастасия</span>
+      <span class="top-path-text">Вы приглашены<br>на свадьбу</span>
+    </div>
+    <div class="cover-paths bottom-path">
+      <span class="bottom-path-text">Вы не просто так получили это приглашение! В особенный день мы очень хотим, чтобы вы были рядом!</span>
+    </div>
+    <div class="stamp-block" onclick="hideOverlay()">
+      <span class="stamp-text">Нажмите</span>
+    </div>
+  </div>
 </body>
 </html>
 
@@ -303,6 +315,10 @@
   }
   #body {
     background-color: var(--color);
+    overflow-y: hidden;
+  }
+  #body.hide-overlay {
+    overflow-y: scroll;
   }
   section {
     height: 100vh;
@@ -316,7 +332,8 @@
     margin: 0 auto;
     mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   }
-  .container {
+  .container,
+  .overlay-wrapper {
     font-family: "LarisaScript";
     color: var(--olive);
     font-size: 18px;
@@ -341,23 +358,6 @@
   #block-0 .title.title-name {
     margin-top: 80px;
     margin-bottom: 5px;
-  }
-  .music-btn-block {
-    margin-top: 40px;
-  }
-  .music-btn {
-    background-repeat: no-repeat;
-    background-size: 50px;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    cursor: pointer;
-  }
-  .music-btn-play {
-    background-image: url(assets/play.png);
-  }
-  .music-btn-pause {
-    background-image: url(assets/pause.png);
   }
   #player:playing > .music-btn-block .music-btn-play {
     display: none;
@@ -740,6 +740,192 @@
     font-size: 18px;
     color: var(--olive);
   }
+
+
+  #music-overlay {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    background-color: var(--olive);
+    width: 50px;
+    height: 50px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .music-btn-block {
+    margin-top: 40px;
+  }
+  .music-btn {
+    background-repeat: no-repeat;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+  }
+  .music-btn-play {
+    background-image: url(assets/play.png);
+  }
+  #music-overlay.play .music-btn-play {
+    display: none;
+  }
+  .music-btn-pause {
+    background-image: url(assets/pause.png);
+  }
+  #music-overlay.stop .music-btn-pause {
+    display: none;
+  }
+
+
+  .overlay-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--olive);
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+  }
+  #body.hide-overlay .overlay-wrapper {
+    animation: fadeOverlay 3s ease-in-out 1 alternate forwards;
+  }
+  .cover-paths {
+    position: fixed;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    max-width: 450px;
+    height: 50vh;
+    left: 0;
+    right: 0;
+  }
+  .cover-paths.top-path {
+    background-image: url("assets/mail_top.png");
+    top: 0;
+  }
+  #body.hide-overlay .cover-paths.top-path {
+    animation: moveAndFadeTop 3s ease-in-out 1 alternate forwards;
+  }
+  .cover-paths.bottom-path {
+    background-image: url("assets/mail_bottom.png");
+    bottom: 0;
+  }
+  #body.hide-overlay .cover-paths.bottom-path {
+    animation: moveAndFadeBottom 3s ease-in-out 1 alternate forwards;
+  }
+  .stamp-block {
+    position: fixed;
+    background-image: url(assets/stamp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #body.hide-overlay .stamp-block {
+    animation: fadeStamp 3s ease-in-out 1 alternate forwards;
+  }
+  .stamp-text {
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .top-path-text-names {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    max-width: 400px;
+    padding: 0px 55px;
+    font-size: 55px;
+    line-height: 45px;
+    text-align: center;
+    top: 35px;
+  }
+  .top-path-text {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    max-width: 400px;
+    padding: 0 85px;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    top: 200px;
+  }
+  .bottom-path-text {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    max-width: 400px;
+    padding: 0 45px;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    bottom: 61px;
+  }
+  @keyframes fadeOverlay {
+    0% {
+      pointer-events: none;
+      background-color: var(--olive);
+    }
+    30% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: transparent;
+      display: none;
+    }
+  }
+  @keyframes moveAndFadeTop {
+    0% {
+      opacity: 1;
+      transform: translateY(0px) translateX(0);
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px) translateX(0);
+    }
+  }
+  @keyframes moveAndFadeBottom {
+    0% {
+      opacity: 1;
+      transform: translateY(0px) translateX(0);
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100px) translateX(0);
+    }
+  }
+  @keyframes fadeStamp {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 </style>
 
 <script>
@@ -784,15 +970,18 @@
     const timerId = setInterval(updateTimer, 1000);
   });
 
-  window.onload = function() {
-    document.getElementById("player").play();
+  function hideOverlay() {
+    document.getElementById("body").classList.add("hide-overlay");
+    playMusic();
   }
 
   function playMusic() {
     document.getElementById('player').play()
+    document.getElementById('music-overlay').classList.replace("stop", "play")
   }
 
   function pauseMusic() {
     document.getElementById('player').pause()
+    document.getElementById('music-overlay').classList.replace("play", "stop")
   }
 </script>
