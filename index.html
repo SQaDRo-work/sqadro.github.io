@@ -116,7 +116,7 @@
         <div class="row justify-content-center">
           <div class="col-sm-12">
             <p class="title">Место проведения</p>
-            <span class="text">Загородный клуб "Небо" Свердловская обл., городской округ<br>Верхняя Пышма</span>
+            <span class="text">Загородный клуб "Небо" Свердловская обл.,<br>городской округ<br>Верхняя Пышма</span>
             <div class="map-wrapper">
               <img class="map" src="assets/map.png">
             </div>
@@ -301,11 +301,11 @@
   <div class="overlay-wrapper">
     <div class="overlay-inner-wrapper">
       <div class="cover-paths top-path">
-        <span id="greetings-names" class="top-path-text-names">Никита<br>&<br>Анастасия</span>
+        <span id="greetings-names" class="top-path-text-names"></span>
         <span class="top-path-text">Вы приглашены<br>на свадьбу</span>
       </div>
       <div class="cover-paths bottom-path">
-        <span class="bottom-path-text">Вы не просто так получили это приглашение! В особенный день мы очень хотим, чтобы вы были рядом!</span>
+        <span class="bottom-path-text">Вы не просто так получили это приглашение! В особенный день мы очень хотим, чтобы Вы были рядом!</span>
       </div>
       <div class="stamp-block" onclick="hideOverlay()">
         <span class="stamp-text">Нажмите</span>
@@ -916,9 +916,8 @@
   .top-path-text-names {
     width: 100vw;
     max-width: 400px;
-    padding: 0px 55px;
-    font-size: 55px;
-    line-height: 55px;
+    font-size: 45px;
+    line-height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -945,7 +944,7 @@
     font-size: 25px;
     line-height: 25px;
     text-align: center;
-    bottom: 61px;
+    bottom: 100px;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -1008,11 +1007,46 @@
 <script>
   window.onload = function() {
     const namesDict = [
-      { name: "Никита<br>&<br>Анастасия", id:	"0C526B5A-F6DE-45D9-B96F-CE1724C9627C" },
-      { name: "Егор", id:	"6B94998A-0DDA-4B86-A980-D00BA221EB67" },
-      { name: "Андрей<br>&<br>Мария", id:	"FBEB7F66-F7DB-4FA8-A8F6-CC66092D0FF5" },
-      { name: "Андрей<br>&<br>Татьяна", id:	"884B93CF-A034-4799-9FC5-3B3E03297F50" },
-      { name: "Владислав<br>&<br>Ксения", id:	"B72AC33A-88B7-4CFB-925B-E77075C13929" },
+      { name: "Влада<br>и<br>Таня", id:	"44457522-2A5B-48D7-A01A-FD15959C2290" },
+      { name: "Дорогие Мама<br>и<br>Папа", id:	"566CEFE2-C5C5-44D2-9600-D18A6337BC08" },
+      { name: "Тимофей<br>и<br>Анастасия", id:	"DE6CA1D0-B8D8-45D6-8673-888247947985" },
+      { name: "тётя Лариса<br>и<br>дядя Вова", id:	"80EE72CF-51CD-470D-89E5-193D43712241" },
+      { name: "тётя Валя", id:	"6408DDC1-A5EB-413C-96BB-785BBC7DFDCE" },
+      { name: "тётя Оля<br>и<br>дядя Слава", id:	"9576D784-DBB8-437D-82A7-0F6EC0F9CD7F" },
+      { name: "Мария, Денис<br>и<br>Максим", id:	"0629E3B9-29DB-4C29-9387-07C14D0230EA" },
+      { name: "Олег<br>и<br>Ольга", id:	"47DFC95D-FFB0-4548-8B51-880E936175C8" },
+      { name: "Лидочка", id:	"D579AE97-D7E2-4D01-9478-BD500B579412" },
+      { name: "Ангелина<br>и<br>Павел", id:	"5B00B0CC-1463-4748-8DE7-F07C799AC955" },
+      { name: "Екатерина<br>и<br>Роман", id:	"1A8FDB88-456B-475A-9A57-D38FA69B5A6E" },
+      { name: "Евгения<br>и<br>Андрей", id:	"03E56A46-3B16-43D1-A80B-C2CDA9E786EC" },
+      { name: "Елена<br>и<br>Артём", id:	"7A094034-ED6A-470E-A845-595240A2FE93" },
+      { name: "Натали, Андрей<br>и<br>Диана", id:	"10A8DD54-7AD4-4D32-B120-DF7BC10B0BA8" },
+      { name: "Ирина", id:	"AA4BA481-575D-4102-822D-1DEF1E0D5412" },
+      { name: "Алёна<br>и<br>Вячеслав", id:	"29BE10E6-1B2E-4F73-B3AF-8228409633FD" },
+      { name: "Андрей<br>и<br>Валерия", id:	"51A54968-F2C6-4E69-B33B-BC218B21C2AC" },
+      { name: "Юлия<br>и<br>Николай", id:	"C14F7E41-612D-4413-9850-00437DB80CD2" },
+      { name: "Светлана, Рома<br>и<br>Тимофей", id:	"5EBBC427-1E5B-43C9-8417-21BDD82F04BD" },
+      { name: "Александра<br>и<br>Никита", id:	"F66021B1-94E1-4CB3-B6BB-15976C97FFB6" },
+
+      { name: "Мамулька<br>и<br>Папаня", id:	"C5E2388E-F5C9-4D49-BD44-0DAADDEFD9A0" },
+      { name: "Дорогие Бабушка<br>и<br>Дедушка", id:	"2CAD09EC-38AC-4D9A-8707-0DCC29993D14" },
+      { name: "дядя Женя<br>и<br>тётя Галя", id:	"FDF73917-5E75-4794-B348-CB946738260C" },
+      { name: "тётя Оля<br>и<br>дядя Толя", id:	"DDEADC54-5EB1-445A-B303-3C002B802803" },
+      { name: "Сергей<br>и<br>Галина", id:	"CBE2DAD5-876C-487F-8027-C72CE5059C84" },
+      { name: "Станислав<br>и<br>Юлия", id:	"BF9056EE-EDE9-4ACA-BD8F-DCB6950B4279" },
+      { name: "Сергей<br>и<br>Наталья", id:	"2276B4FE-6508-474F-8EB5-CF5B043FA7DA" },
+      { name: "Сергей<br>и<br>Людмила", id:	"16D1138C-CEBE-4E2C-8A3F-D537BF72DB7D" },
+      { name: "Никита<br>и<br>Анастасия", id:	"48F626FA-CD82-413D-9141-998936CD8A9F" },
+      { name: "Станислав<br>и<br>Екатерина", id:	"AE527027-6720-4F7B-A5E0-46E75356263A" },
+      { name: "Андрей<br>и<br>Мария", id:	"DE74E4D5-B2A3-41C5-A17C-031A11731C17" },
+      { name: "Андрей<br>и<br>Татьяна", id:	"622A07E5-A484-4110-8061-8A5B0B6A3DA7" },
+      { name: "Михаил<br>и<br>Екатерина", id:	"8D9967F9-E3AE-43E5-9332-D6BCAF05C089" },
+      { name: "Егор", id:	"4091B70A-DA42-46BC-B6AB-D79A3C6BD208" },
+      { name: "Владислав<br>и<br>Ксения", id:	"5506C1B8-B282-4F3F-8E4C-240E86C8C8F9" },
+      { name: "Никита<br>и<br>Кристина", id:	"7F932B79-4F99-4CA5-946C-B9DAC956099B" },
+      { name: "Семён<br>и<br>Ксения", id:	"55CB5888-9036-484D-8312-66F13AE86769" },
+      { name: "Максим<br>и<br>Ирина", id:	"E989B7A2-D6D9-4136-A72D-1907AEA61E75" },
+      { name: "Мирослав<br>и<br>Татьяна", id:	"4D54C341-3AFE-4E6E-AE42-AAC4725ED361" },
     ]
     let id = new URLSearchParams(window.location.search).get("id");
     let greetingsText = namesDict.find(guest => guest.id === id).name;
