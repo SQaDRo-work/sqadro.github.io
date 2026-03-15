@@ -245,7 +245,7 @@
                 Нет, не нужна помощь
               </label>
             </div>
-            <a class="btn" href="javascript:void(0)" onclick="sendAnswer()">Отправить</a>
+            <a id="send-btn" class="btn" href="javascript:void(0)" onclick="sendAnswer()">Отправить</a>
             <span class="additional-text">* Для гостей из Екатеринбурга будет организован трансфер</span>
           </div>
         </div>
@@ -711,6 +711,12 @@
   #block-7 .btn {
     margin-top: 10px;
   }
+  #block-7 .btn.sended {
+    background-color: #ffffff !important;
+    color: var(--olive) !important;
+    border: 2px solid var(--olive);
+    line-height: 21px;
+  }
   .additional-text {
     display: block;
   }
@@ -1112,6 +1118,9 @@
   }
 
   async function sendAnswer() {
+    let btn = document.getElementById('send-btn')
+    btn.classList.add("sended");
+    btn.innerText = "Отправлено!";
     let id = new URLSearchParams(window.location.search).get("id");
     let willBe = document.querySelector('input[name="exist-on-wedding"]:checked').value === "true";
     let needHome = document.querySelector('input[name="home-on-wedding"]:checked').value === "true";
